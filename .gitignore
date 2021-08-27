@@ -1,0 +1,5 @@
+.idea/
+node_modules/
+
+# Project exclude paths
+/1-basic-types/example-11.js

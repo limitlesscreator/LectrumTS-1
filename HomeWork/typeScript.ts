@@ -131,4 +131,58 @@ let admin: personType = {
         return `${this.name}${this.age}`
     }
 }
+{
+    interface User {
+        name: string
+        age: number
+    }
 
+    const yauhen: User = {
+        name: 'Yauhen',
+        age: 31,
+        // nick: 'vova' <--- error, Didn't described in interface "User"
+    }
+
+    interface User2 {
+        name: string
+        age: number
+
+        [propName: string]: any
+    }
+
+    const yauhen2: User2 = {
+        name: 'Yauhen',
+        age: 31,
+        country: 'USA'
+    }
+
+    // const getter = (data: any) => data
+    const getter = <T>(data: T): T => data
+    getter('10').length
+    getter<string>('10').length
+
+    //start ts with english video
+    let age = 24;
+
+    let weight: number = 170
+    weight = 180
+    // weight = true <--- error
+    weight = +'160'
+
+    const add = (num1: number, num2: number): number => {
+        // Logic
+        // Logic
+        // Logic
+        return num1 + num2
+    }
+
+    // add(true, {}) <-- error
+    add(2, 5)
+
+    // UNION TYPE
+    let numberOrString: string | number = 'Laith Harb'
+
+    numberOrString = 4
+    numberOrString = 'Laora'
+    // numberOrString = true <-- error
+}

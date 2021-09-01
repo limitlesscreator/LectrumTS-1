@@ -185,4 +185,59 @@ let admin: personType = {
     numberOrString = 4
     numberOrString = 'Laora'
     // numberOrString = true <-- error
+
+    //Type String
+    let myName = 'Laith Harb'
+    let myDogName: string = 'Laith Harb'
+
+    // myName = "Laith Harb".length <--- error
+
+    //Type Boolean
+    let isAwesome = false
+    let isAwesome2 = 'Laith Harb'.length === 0
+    let isBoring: boolean = true
+
+    type objType = {
+        firstName: string
+        lastName: string
+        phone: string
+        age: number
+        gender: boolean
+    }
+
+    const obj: objType = {
+        firstName: 'Laith',
+        lastName: 'Habr',
+        phone: '222-222-2222',
+        age: 24,
+        gender: false,
+    }
+
+    const arrayOfString = ['string1', 'string2', 'string3']
+    arrayOfString.push('string4')
+    // arrayOfString.push(4) <-- error cuz every element in this arr is a string
+
+    const arrayOfString2: (string | number)[] = ['string1', 'string2', 'string3']
+    arrayOfString2.push(2)
+
+    const arrayOfBooleans: boolean[] = [true, false]
+    arrayOfBooleans.push(!!0)
+
+    // const ArrayOfArrays2: (string | number)[][] = [[4, '', ''], ['','',true]] <-- error cuz in the second arr is true)
+    const ArrayOfArrays: (string | number)[][] = [[4, '', ''], ['', '']]
+
+    const compare = (num1: number, num2: number): boolean => {
+        return num1 > num2
+    }
+
+    const log = (name: string): void => {
+        console.log(name)
+    }
+
+    let array: (string | number | null)[] = ['', 4, null]
+
+    let rainbowColor: 'red' | 'orange' | 'blue' | 'yellow' | 'indigo' | 'violent' = 'red'
+
+    rainbowColor = 'red'
+    // rainbowColor = 'green' <-- error cuz union type doesn't include green:)
 }
